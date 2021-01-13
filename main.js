@@ -60,4 +60,20 @@ $(document).ready(function() {
 
   });
 
+  // BONUS
+
+  $('.fa-circle').click(function() {
+
+    $('.active').removeClass('active');
+
+    $('.images img')
+      .eq($(this).index())
+      .addClass('active');
+
+    $('.fa-circle')
+      .eq($(this).index())
+      .addClass('active');
+
+  });
+
 });
