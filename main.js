@@ -44,7 +44,7 @@ $(document).ready(function() {
       } else {
         activeImg.removeClass('active').next().addClass('active');
       }
-      
+
     } else if (event.which === 37 || event.which === 40) {
       console.log('previous');
 
