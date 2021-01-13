@@ -17,7 +17,14 @@ $(document).ready(function() {
 // previous image
   $('.fa-angle-left').click(function() {
 
-    $('.active').removeClass('active').prev().addClass('active');
+    var activeImg = $('.active');
+    activeImg.removeClass('active').prev().addClass('active');
+    if (activeImg.hasClass('first')) {
+      var lastImg = $('.last');
+      lastImg.addClass('active');
+    }else {
+      activeImg.removeClass('active').prev().addClass('active');
+    }
 
   })
 
