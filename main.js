@@ -1,11 +1,24 @@
 $(document).ready(function() {
 
+// next image
   $('.fa-angle-right').click(function() {
-    $('.active.first').removeClass('active').next().addClass('active first');
+
+    var activeImg = $('.active');
+    activeImg.removeClass('active').next().addClass('active');
+    if (activeImg.hasClass('last')) {
+      var firstImg = $('.first');
+      firstImg.addClass('active');
+    }else {
+      activeImg.removeClass('active').next().addClass('active');
+    }
+
   })
 
+// previous image
   $('.fa-angle-left').click(function() {
-    $('.active.first').removeClass('active').prev().addClass('active first');
+
+    $('.active').removeClass('active').prev().addClass('active');
+
   })
 
 })
