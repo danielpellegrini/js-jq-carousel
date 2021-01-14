@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+
+  //standard img size
+  $('img').css({
+    'width': '1100px'
+  });
+
   // next image
 
   $('.fa-angle-right').click(function() {
